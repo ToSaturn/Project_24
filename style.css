@@ -1,0 +1,221 @@
+body {
+  width: 1200px;
+  margin: auto;
+  font-family: 'BoschSans';
+}
+
+main {
+  width: 1200px;
+  height: 100%;
+}
+
+.logo_bosch {
+  margin: 10px 0 10px 100px;
+}
+
+.title_name {
+  margin: 40px 100px 40px 100px;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'BoschSans';
+  line-height: 40.8px;
+}
+
+.img_product {
+  text-align: center;
+  margin: 57px 0 57px 0;
+}
+
+.icon_product {
+  display: flex;
+  justify-content: space-around;
+  padding: 52.5px 0 72.5px 0;
+}
+
+img.rainbow {
+  margin-top: 50px;
+}
+
+.description_title {
+  width: 1000px;
+  margin: auto;
+}
+
+.subtitle {
+  margin: 60px 0 30px 0;
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 30px 20px 60px 20px;
+}
+
+.main_block {
+  width: 1200px;
+  display: flex;
+  margin-top: 40px;
+  height: 100%;
+}
+
+.name_title {
+  margin: 100px 65px 30px 65px;
+  text-align: left;
+  font-size: 30px;
+}
+
+.descript_text {
+  margin: 0 65px 95px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.text_bosch {
+  position: relative;
+  width: 50%;
+}
+
+.rainbow_block {
+  position: absolute;
+  bottom: 0;
+}
+
+.text_bosch:nth-child(odd) .rainbow_block {
+  left: 0 !important;
+}
+
+.text_bosch:nth-child(even) .rainbow_block {
+  transform: scale(-1, 1);
+  right: 0 !important;
+}
+
+.image_bosh {
+  align-self: center;
+  width: 600px;
+  text-align: center;
+}
+
+.title_size {
+  text-align: center;
+  font-size: 30px;
+  margin: 60px 0;
+}
+
+.title_design {
+  font-size: 40px;
+  margin: 80.2px 0;
+  text-align: center;
+}
+
+.carousel-wrapper {
+  height: 625px;
+  position: relative;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+.arrow-prev {
+  left: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+  right: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.light {
+  color: white;
+}
+
+[id^="item"] {
+  display: none;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url('image/slide/img_1.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.item-2 {
+  background: url('image/slide/img_2.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.item-3 {
+  background: url('image/slide/img_3.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.item-4 {
+  background: url('image/slide/img_4.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+*:target~.item-1 {
+  opacity: 0;
+}
+
+#item-1:target~.item-1 {
+  opacity: 1;
+}
+
+#item-2:target~.item-2, #item-3:target~.item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+
+#item-3:target~.item-3, #item-4:target~.item-4 {
+  z-index: 3;
+  opacity: 1;
+}
+
+.text_min {
+  margin: 100px 0 40px 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'BoschSans';
+  src: url("fonts/bosch/bosch-sans_light.eot");
+  src: url("fonts/bosch/bosch-sans_light.eot?#iefix") format("embedded-opentype"),
+    url("fonts/bosch/bosch-sans_light.otf") format("opentype"),
+    url("fonts/bosch/bosch-sans_light.svg") format("svg"),
+    url("fonts/bosch/bosch-sans_light.ttf") format("truetype"),
+    url("fonts/bosch/bosch-sans_light.woff") format("woff"),
+    url("fonts/bosch/bosch-sans_light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
