@@ -4,95 +4,100 @@ body {
   font-family: 'BoschSans';
 }
 
-main {
+.main {
   width: 1200px;
   height: 100%;
 }
 
-.logo_bosch {
+.header__logo-bosch {
   margin: 10px 0 10px 100px;
 }
 
-.title_name {
+.header__title-name{
   margin: 40px 100px 40px 100px;
   font-size: 40px;
   text-align: center;
   font-family: 'BoschSans';
-  line-height: 40.8px;
+  line-height: 41px;
 }
 
-.img_product {
+.main__img-product {
   text-align: center;
   margin: 57px 0 57px 0;
 }
 
-.icon_product {
+.main__icon-product {
   display: flex;
   justify-content: space-around;
-  padding: 52.5px 0 72.5px 0;
+  padding: 53px 0 73px 0;
 }
 
 img.rainbow {
   margin-top: 50px;
 }
 
-.description_title {
+.main__description-title{
   width: 1000px;
   margin: auto;
 }
 
-.subtitle {
+.main__description-title-subtitle {
   margin: 60px 0 30px 0;
   font-size: 30px;
   text-align: center;
   line-height: 30px;
 }
 
-.description {
+.main__description-title-description {
   font-size: 16px;
   line-height: 26px;
   margin: 30px 20px 60px 20px;
 }
 
-.main_block {
+.main-block {
   width: 1200px;
   display: flex;
   margin-top: 40px;
   height: 100%;
 }
 
-.name_title {
+.name-title {
   margin: 100px 65px 30px 65px;
   text-align: left;
   font-size: 30px;
 }
 
-.descript_text {
+.descript-text {
   margin: 0 65px 95px;
   font-size: 16px;
   text-align: left;
+
 }
 
-.text_bosch {
+.main-block__text-bosch {
   position: relative;
   width: 50%;
 }
 
-.rainbow_block {
+.rainbow-block {
   position: absolute;
   bottom: 0;
 }
 
-.text_bosch:nth-child(odd) .rainbow_block {
+.main-block__text-bosch:nth-child(odd) .rainbow_block {
   left: 0 !important;
+  position: absolute;
+  bottom: 0;
 }
 
-.text_bosch:nth-child(even) .rainbow_block {
+.main-block__text-bosch:nth-child(even) .rainbow_block {
   transform: scale(-1, 1);
   right: 0 !important;
+  position: absolute;
+  bottom: 0;
 }
 
-.image_bosh {
+.main-block__image-bosh {
   align-self: center;
   width: 600px;
   text-align: center;
@@ -106,7 +111,7 @@ img.rainbow {
 
 .title_design {
   font-size: 40px;
-  margin: 80.2px 0;
+  margin: 80px 0;
   text-align: center;
 }
 
@@ -205,6 +210,46 @@ img.rainbow {
   margin: 100px 0 40px 0;
   font-size: 12px;
   text-align: center;
+}
+
+.main-block.mobile:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-block.mobile:nth-child(even) {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.mobile .main-block__text-bosch {
+    width: 100%;
+}
+
+.mobile .descript-text {
+    font-size: calc(14px + 4vw);
+}
+
+.mobile .name-title {
+    font-size: calc(14px + 5vw);
+}
+
+.mobile .main__description-title-subtitle{
+    font-size: calc(14px + 5vw);
+    line-height: 80px;
+}
+
+.mobile .main__description-title-description {
+    font-size: calc(14px + 4vw);
+        line-height: 87px;
+}
+
+.main__icon-product.mobile img {
+      width: 15%;
+}
+
+.main-block.mobile .img-pr {
+  width:100%;
 }
 
 @font-face {
